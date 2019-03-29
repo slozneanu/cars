@@ -1,0 +1,14 @@
+def car(manufacturer, model, **car_info):
+    """Build a dictionary about a car."""
+    description = {}
+    descrition['manufacturer_name'] = manufacturer
+    description['model_name'] = model
+    for key, value in car_info.items():
+        description[key] = value
+    return description
+    
+car_description = car('honda', 'civic', color='blue', tow_package='True')
+car_description = car('subaru', 'outback', color='blue', tow_package='True')
+car_description = car('tesla', 'model 3', color='black', tow_package='False')
+
+print(car_description)
